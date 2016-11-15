@@ -2,44 +2,79 @@
             <div class="panel-heading apt-addheading" (click)="toggleForm()">
             <span class="glyphicon glyphicon-plus"></span> Add Appointment</div>
             <div class="panel-body" *ngIf="showForm">
-              <form class="add-appointment form-horizontal">
+              <form
+                    #aptForm="ngForm"
+                    class="add-appointment form-horizontal"
+                    novalidate>
                 <div class="form-group">
-                  <label class="col-sm-2 control-label" htmlFor="petName">Pet Name</label>
+                  <label class="col-sm-2 control-label">Pet Name</label>
                   <div class="col-sm-10">
-                    <input #petName.value type="text" class="form-control"
-                      id="petName" placeholder="Pet's Name" />
+                    <input #petName
+                            type="text"
+                            class="form-control"
+                            id="petName"
+                            placeholder="Pet's Name"
+                            name="petName"
+                            required
+                            />
+                  </div>
+
+                </div>
+                <div class="alert alert-danger"
+                     [hidden]="petName.valid || petName.pristine">
+                   Pet name is required
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Pet Owner</label>
+                  <div class="col-sm-10">
+                    <input type="text"
+                           class="form-control"
+                           id="petOwner"
+                           placeholder="Owner's Name"
+                           name="petOwner"
+                           required
+                           #ownerName
+                           />
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 control-label" htmlFor="petOwner">Pet Owner</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control"
-                      id="petOwner" placeholder="Owner's Name" />
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label" htmlFor="aptDate">Date</label>
+                  <label class="col-sm-2 control-label">Date</label>
                   <div class="col-sm-4">
-                    <input type="date" class="form-control"
-                      id="aptDate" />
+                    <input type="date"
+                           class="form-control"
+                           id="aptDate"
+                           name="aptDate"
+                           required
+                           #aptDate
+                           />
                   </div>
-                  <label class="col-sm-2 control-label" htmlFor="aptTime">Time</label>
+                  <label class="col-sm-2 control-label">Time</label>
                   <div class="col-sm-4">
-                    <input type="time" class="form-control"
-                      id="aptTime" />
+                    <input type="time"
+                           class="form-control"
+                           id="aptTime"
+                           name="aptTime"
+                           required
+                           #aptTime
+                           />
                   </div>
 
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 control-label" htmlFor="aptNotes">Apt. Notes</label>
+                  <label class="col-sm-2 control-label">Apt. Notes</label>
                   <div class="col-sm-10">
                     <textarea class="form-control" rows="4" cols="50"
-                      id="aptNotes" placeholder="Appointment Notes"></textarea>
+                      id="aptNotes" placeholder="Appointment Notes"
+                      name="aptNote"
+                        #aptNote
+
+
+                      ></textarea>
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-primary pull-right" (click)="btnSubmit(petName)">Add Appointment</button>
+                    <button [disabled]="!aptForm.form.valid" type="submit" class="btn btn-primary pull-right" (click)="onSubmit()">Add Appointment</button>
                   </div>
                 </div>
               </form>

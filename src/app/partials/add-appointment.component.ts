@@ -8,6 +8,10 @@ import { Apointment } from '../apointment';
 })
 
 export class AddApointmentComponent {
+
+    // apt = new Apointment("Yasha", "Nikolay", "25.12.16", "Lack of appetite");
+    submitted = false;
+
     showForm: boolean;
     constructor() {
       this.showForm = false;
@@ -17,9 +21,11 @@ export class AddApointmentComponent {
       this.showForm = !this.showForm;
     }
 
-    btnSubmit(item) {
-      console.log("submited");
-      console.log(item);
+    onSubmit(newApt) {
+      newApt = new Apointment("", "", "", "", "");
+      console.log();
+      this.submitted = true;
+      // this.newApt = new Apointment("", "", "", "", "");
     }
 
 
