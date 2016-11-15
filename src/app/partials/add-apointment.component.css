@@ -1,0 +1,30 @@
+@keyframes showBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.panel-body {
+  animation: showBody 1s ease both;
+}
+.panel.panel-primary {
+  border-color: #089de3 ;
+}
+.panel-heading.apt-addheading {
+  background-color: #089de3;
+  border: none;
+}
+.panel-heading.apt-addheading:hover {
+  cursor: pointer;
+}
+.btn.btn-primary.pull-right {
+  background-color: #089de3;
+  border-color: #089de3;
+  transition: #089de3;
+}
+.btn.btn-primary.pull-right:hover {
+  background-color: #089de3;
+  border-color: #089de3;
+}

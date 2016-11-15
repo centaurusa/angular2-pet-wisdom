@@ -1,0 +1,27 @@
+
+.navbar {
+    border-radius: 0;
+    padding: 10px 10px;
+    margin-bottom: 40px;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'montserrat';
+}
+
+img#pet-icon {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.navbar .navbar-left {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+nav.navbar.navbar-inverse {
+  background-color: #089de3;
+  border: #089de3;
+}

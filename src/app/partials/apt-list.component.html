@@ -1,0 +1,15 @@
+<li class="media" *ngFor="let i of apts">
+  <div class="media-left">
+    <button class="pet-delete btn btn-xs btn-danger" (click)="aptDelete()">
+      <span class="glyphicon glyphicon-remove"></span>
+    </button>
+  </div>
+  <div>
+    <span class="pet-name">{{ i.petName}}</span>
+    <span class="apt-date pull-right">{{ i.aptDate }}</span>
+  </div>
+  <div class="ownerName"><span class="label-item">Owner: </span>
+  {{ i.ownerName }}
+  </div>
+  <div class="apt-notes">{{ i.aptNotes }}</div>
+</li>
