@@ -11,7 +11,7 @@ export class AddApointmentComponent {
 
     // apt = new Apointment("Yasha", "Nikolay", "25.12.16", "Lack of appetite");
     submitted = false;
-
+    aptsNew = [];
     showForm: boolean;
     constructor() {
       this.showForm = false;
@@ -21,11 +21,12 @@ export class AddApointmentComponent {
       this.showForm = !this.showForm;
     }
 
-    onSubmit(newApt) {
-      newApt = new Apointment("", "", "", "", "");
-      console.log();
+    onSubmit(petName, ownerName, aptDate, aptTime, aptNote) {
+      let newApt = new Apointment(petName, ownerName, aptDate, aptTime, aptNote);
+      console.log(newApt);
+      this.aptsNew.push(newApt);
       this.submitted = true;
-      // this.newApt = new Apointment("", "", "", "", "");
+      console.log(this.aptsNew);
     }
 
 
