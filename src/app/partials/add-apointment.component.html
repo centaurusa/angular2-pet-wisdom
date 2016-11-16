@@ -5,7 +5,9 @@
               <form
                     #f="ngForm"
                     class="add-appointment form-horizontal"
-                    novalidate>
+                    (ngSubmit)="onSubmit(f.value)"
+                    novalidate
+                    >
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Pet Name</label>
                   <div class="col-sm-10">
@@ -16,15 +18,17 @@
                             placeholder="Pet's Name"
                             name="petName"
                             required
-                            #petName
+                            ngModel
+                            #petName="ngModel"
                             />
+
                   </div>
 
                 </div>
-                <!-- <div class="alert alert-danger"
+                <div class="alert alert-danger"
                      [hidden]="petName.valid || petName.pristine">
                    Pet name is required
-                </div> -->
+                </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Pet Owner</label>
                   <div class="col-sm-10">
@@ -34,6 +38,7 @@
                            placeholder="Owner's Name"
                            name="petOwner"
                            required
+                           ngModel
                            #ownerName
                            />
                   </div>
@@ -46,6 +51,7 @@
                            id="aptDate"
                            name="aptDate"
                            required
+                           ngModel
                            #aptDate
                            />
                   </div>
@@ -56,6 +62,7 @@
                            id="aptTime"
                            name="aptTime"
                            required
+                           ngModel
                            #aptTime
                            />
                   </div>
@@ -67,7 +74,11 @@
                     <textarea class="form-control" rows="4" cols="50"
                       id="aptNotes" placeholder="Appointment Notes"
                       name="aptNote"
+                        ngModel
+                        required
                         #aptNote
+
+
 
 
                       ></textarea>
@@ -75,11 +86,7 @@
                 </div>
                 <div class="form-group">
                   <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-primary pull-right" (click)="onSubmit(petName.value,
-                    ownerName.value,
-                    aptDate.value,
-                    aptTime.value,
-                    aptNote.value )">Add Appointment</button>
+                    <button type="submit" class="btn btn-primary pull-right">Add Appointment</button>
                   </div>
                 </div>
               </form>

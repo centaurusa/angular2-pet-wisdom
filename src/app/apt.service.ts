@@ -6,9 +6,9 @@ import 'rxjs/add/operator/map';
 
 
 export class AptService {
-  // private _url = "https://petapointments.firebaseio.com/Apts";
-     private _url = "https://jsonplaceholder.typicode.com/users";
-    // private _url = "src/app/data.json";
+    // private _url = "https://petapointments.firebaseio.com/Apts";
+    //  private _url = "https://jsonplaceholder.typicode.com/users";
+    private _url = "/data.json";
 
   constructor(private _http: Http) {
 

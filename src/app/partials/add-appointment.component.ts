@@ -21,13 +21,10 @@ export class AddApointmentComponent {
       this.showForm = !this.showForm;
     }
 
-    onSubmit(petName, ownerName, aptDate, aptTime, aptNote) {
-      let newApt = new Apointment(petName, ownerName, aptDate, aptTime, aptNote);
-      console.log(newApt);
-      this.aptsNew.push(newApt);
-      this.submitted = true;
-      console.log(this.aptsNew);
-    }
+    onSubmit(value: any) {
+        console.log(value);
+      }
+    
 
 
 }

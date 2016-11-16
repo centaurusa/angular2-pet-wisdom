@@ -28,3 +28,6 @@
   background-color: #089de3;
   border-color: #089de3;
 }
+.alert.alert-danger {
+  animation: showBody 1s ease both;
+}
