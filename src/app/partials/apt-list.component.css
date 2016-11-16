@@ -13,6 +13,8 @@ li.media {
 .pet-delete {
   transition: background-color 0.3s;
 }
+.pet-delete:hover {
+}
 .pet-name {
   font-size: 19px;
   font-weight: 700;

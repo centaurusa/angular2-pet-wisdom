@@ -17,7 +17,7 @@ export class AptListComponent implements OnInit {
   }
 
   @Input()
-  data: Object;
+   data = [];
 
   constructor(private _aptService: AptService) {
 
@@ -25,13 +25,21 @@ export class AptListComponent implements OnInit {
 
 
   ngOnInit() {
-    this._aptService.getApts()
-      .subscribe(
-        // (data: Response) => this.apointments.push(data),
-        (data: Response) => {this.data = data; console.log(this.data); this.notification = true;},
-        (error: Response) => console.log(error)
-      );
+    // this._aptService.getApts()
+    //   .subscribe(
+    //     // (data: Response) => this.apointments.push(data),
+    //     (data: Response) => {this.data = data; console.log(this.data); this.notification = true;},
+    //     (error: Response) => console.log(error)
+    //   );
 
+      this.fbGetData();
+  }
+
+  fbGetData() {
+    firebase.database().ref('/').on('child_added', (snapshot) => {
+      console.log(snapshot.val());
+      this.data.unshift(snapshot.val())
+    })
   }
 
 }//end class

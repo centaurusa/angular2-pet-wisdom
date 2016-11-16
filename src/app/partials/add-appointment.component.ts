@@ -17,7 +17,7 @@ export class AddApointmentComponent {
     aptsNew = [];
     showForm: boolean;
 
-    newApt = new Apointment("", "", "", "", "");
+
 
     constructor() {
       this.showForm = false;
@@ -30,17 +30,17 @@ export class AddApointmentComponent {
     }
 
     onSubmit(value: any) {
-        console.log(value);
-        this.newApt.petName = value.petName;
-        this.newApt.petOwner = value.petOwner;
-        this.newApt.aptDate = value.aptDate;
-        this.newApt.aptTime = value.aptTime;
-        this.newApt.aptNote = value.aptNote;
-        console.log(this.newApt);
+        let apointment : Apointment = new Apointment();
+
+        apointment.setApt(value.petName, value.petOwner, value.aptDate, value.aptTime, value.aptNotes);
         // firebase.database().ref('/').push(value)
-        console.log(value.petName);
+        console.log(apointment);
+         this.send(apointment);
       }
 
 
 
+      private send(apointment : Apointment) {
+        firebase.database().ref('/').push(apointment);
+      }
 }
