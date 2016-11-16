@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { AptService } from '../apt.service';
+declare var firebase: any;
 
 @Component({
   selector: 'apt-list',
@@ -21,6 +22,8 @@ export class AptListComponent implements OnInit {
   constructor(private _aptService: AptService) {
 
   }
+
+
   ngOnInit() {
     this._aptService.getApts()
       .subscribe(
