@@ -5,7 +5,8 @@
               <form
                     #f="ngForm"
                     class="add-appointment form-horizontal"
-                    (ngSubmit)="onSubmit(f.value)"
+                    (ngSubmit)="onSubmit(f.value);"
+                    *ngIf="active"
                     novalidate
                     >
                 <div class="form-group">
@@ -73,7 +74,7 @@
                     </div>
 
                   </div><!-- form-group-->
-                <
+
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Apt. Notes</label>
