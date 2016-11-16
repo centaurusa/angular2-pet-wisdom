@@ -30,4 +30,8 @@
 }
 .alert.alert-danger {
   animation: showBody 1s ease both;
+  text-align: center;
+}
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
+  border-color: rgba(222,22,22,1);
 }

@@ -10,20 +10,23 @@ import { AptService } from '../apt.service';
 })
 
 export class AptListComponent implements OnInit {
-
+  notification = false;
   aptDelete() {
     console.log("deleting apt");
   }
 
   @Input()
   data: Object;
+
   constructor(private _aptService: AptService) {
 
   }
   ngOnInit() {
     this._aptService.getApts()
       .subscribe(
-        (data: Response) => console.log(data)
+        // (data: Response) => this.apointments.push(data),
+        (data: Response) => {this.data = data; console.log(this.data); this.notification = true;},
+        (error: Response) => console.log(error)
       );
 
   }
