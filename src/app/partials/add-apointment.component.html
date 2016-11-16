@@ -39,12 +39,12 @@
                            name="petOwner"
                            required
                            ngModel
-                           #ownerName="ngModel"
+                           #petOwner="ngModel"
                            />
                   </div>
                 </div><!-- form-group-->
                 <div class="alert alert-danger"
-                     [hidden]="ownerName.valid || ownerName.pristine">
+                     [hidden]="petOwner.valid || petOwner.pristine">
                    Owner name is required
                 </div>
 
