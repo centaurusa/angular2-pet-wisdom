@@ -13,6 +13,8 @@ import { AddApointmentComponent } from './partials/add-appointment.component';
 import { AptListComponent  } from './partials/apt-list.component';
 import { AptAboutComponent } from './partials/apt-about.component';
 import { AptFormComponent } from './partials/apt-form.component';
+import { AptContactComponent } from './partials/apt-contact.component';
+import { PageNotFoundComponent } from './partials/pageNotFoundComponent';
 
 //Services
 import { AptService } from './apt.service';
@@ -20,7 +22,9 @@ import { AptService } from './apt.service';
 const appRoutes: Routes = [
   { path: 'home', component: AptFormComponent },
   { path: 'about', component: AptAboutComponent },
-  { path: '', component: AptFormComponent }
+  { path: 'contact', component: AptContactComponent },
+  { path: '', component: AptFormComponent },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
@@ -31,7 +35,9 @@ const appRoutes: Routes = [
     AddApointmentComponent,
     AptListComponent,
     AptFormComponent,
-    AptAboutComponent
+    AptAboutComponent,
+    AptContactComponent,
+    PageNotFoundComponent
 
   ],
   imports: [

@@ -25,3 +25,27 @@ nav.navbar.navbar-inverse {
   background-color: #089de3;
   border: #089de3;
 }
+ul li a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: color 0.3s ease-in-out;
+  -webkit-ransition: color 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+}
+ul.nav.navbar-nav.navbar-right li a:hover {
+  color: #FF634D;
+}
+ul li a.active {
+  color: #ff634d;
+  border-radius: 3px;
+}
+
+.navbar-inverse .navbar-toggle:focus,
+.navbar-inverse .navbar-toggle:hover {
+  background-color: #FF634D;
+}
+.navbar-inverse .navbar-toggle {
+  border-color: #fff;
+}
