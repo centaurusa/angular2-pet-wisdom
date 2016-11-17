@@ -10,6 +10,7 @@ import 'rxjs/add/observable/throw';
 
 export class AptService {
     private _url = "https://petapointments.firebaseio.com/.json";
+    private _urlAptFirst = "https://petapointments.firebaseio.com/.json";
     //  private _url = "https://jsonplaceholder.typicode.com/users";
     // private _url: string = "data.json";
 
@@ -23,9 +24,8 @@ export class AptService {
       .catch(this._errorHandler);
   }
 
-  postApts() {
-    
-}
+  removeApt() {
+  }
   _errorHandler(error: Response) {
     console.error(error);
     return Observable.throw(error || "Server error");

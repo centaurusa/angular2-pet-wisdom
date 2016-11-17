@@ -1,0 +1,19 @@
+
+
+/*src: url('./assets/montserrat/Montserrat-Black.otf');  900
+src: url('./assets/montserrat/Montserrat-Hairline.otf');
+src: url('./assets/montserrat/Montserrat-Light.otf');*/
+
+
+.item-list {
+  padding: 0;
+}
+.item-list span.apt-date {
+
+}
+
+.container.apt-container {
+  min-height: 600px;
+  font-family: 'montserrat';
+  color: #60646d;
+}

@@ -42,4 +42,15 @@ export class AptListComponent implements OnInit {
     })
   }
 
+  getIndex() {
+    for (let i=0;i<this.data.length;i++) {
+       
+    }
+  }
+
+  deleteData() {
+    let index;
+    let ref = firebase.database().ref('/');
+
+  }
 }//end class
