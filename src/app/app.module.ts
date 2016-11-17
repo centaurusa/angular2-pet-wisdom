@@ -19,6 +19,9 @@ import { PageNotFoundComponent } from './partials/pageNotFoundComponent';
 //Services
 import { AptService } from './apt.service';
 
+//Modules
+import { AppRoutingModule } from './app-routing.module';
+
 const appRoutes: Routes = [
   { path: 'home', component: AptFormComponent },
   { path: 'about', component: AptAboutComponent },
@@ -44,7 +47,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    AppRoutingModule
   ],
   providers: [ AptService ],
   bootstrap: [AppComponent]

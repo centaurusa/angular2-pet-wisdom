@@ -6,6 +6,8 @@
     opacity: 1;
   }
 }
+
+
 .panel-body {
   animation: showBody 1s ease both;
 }

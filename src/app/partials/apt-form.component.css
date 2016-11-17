@@ -17,3 +17,7 @@ src: url('./assets/montserrat/Montserrat-Light.otf');*/
   font-family: 'montserrat';
   color: #60646d;
 }
+
+.apt-wrapper {
+  margin-top: 40px;
+}
