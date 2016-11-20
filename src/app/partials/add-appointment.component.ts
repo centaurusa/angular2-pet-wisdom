@@ -11,8 +11,6 @@ declare var firebase: any;
 })
 
 export class AddApointmentComponent {
-
-    // apt = new Apointment("Yasha", "Nikolay", "25.12.16", "Lack of appetite");
     submitted = false;
     aptsNew = [];
     showForm: boolean;
@@ -23,7 +21,9 @@ export class AddApointmentComponent {
       this.showForm = false;
     }
 
+    moveToAbout() {
 
+    }
 
     toggleForm() {
       this.showForm = !this.showForm;

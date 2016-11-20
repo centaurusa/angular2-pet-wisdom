@@ -11,24 +11,19 @@ import { HeaderComponent } from './partials/header.component';
 import { FooterComponent } from './partials/footer.component';
 import { AddApointmentComponent } from './partials/add-appointment.component';
 import { AptListComponent  } from './partials/apt-list.component';
-import { AptAboutComponent } from './partials/apt-about.component';
 import { AptFormComponent } from './partials/apt-form.component';
 import { AptContactComponent } from './partials/apt-contact.component';
 import { PageNotFoundComponent } from './partials/pageNotFoundComponent';
+import { AptStaffComponent } from './partials/apt-staff.component';
+
 
 //Services
 import { AptService } from './apt.service';
+import { StaffService } from './staff.service';
 
 //Modules
 import { AppRoutingModule } from './app-routing.module';
 
-const appRoutes: Routes = [
-  { path: 'home', component: AptFormComponent },
-  { path: 'about', component: AptAboutComponent },
-  { path: 'contact', component: AptContactComponent },
-  { path: '', component: AptFormComponent },
-  { path: '**', component: PageNotFoundComponent }
-];
 
 @NgModule({
   declarations: [
@@ -38,7 +33,7 @@ const appRoutes: Routes = [
     AddApointmentComponent,
     AptListComponent,
     AptFormComponent,
-    AptAboutComponent,
+    AptStaffComponent,
     AptContactComponent,
     PageNotFoundComponent
 
@@ -49,7 +44,7 @@ const appRoutes: Routes = [
     HttpModule,
     AppRoutingModule
   ],
-  providers: [ AptService ],
+  providers: [ AptService, StaffService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

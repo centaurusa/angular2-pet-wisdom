@@ -49,3 +49,10 @@ ul li a.active {
 .navbar-inverse .navbar-toggle {
   border-color: #fff;
 }
+
+div.navbar-collapse.collapse.in,
+div.navbar-collapse.collapsing,
+div.navbar-header.col-md-offset-1 {
+  border-top: none;
+  outline: none;
+}

@@ -1,0 +1,22 @@
+<div class="container main">
+    <h2> Our Staff</h2>
+  <div class="row">
+
+    <div class="col-md-8 col-md-offset-2">
+
+      <div *ngFor="let vet of staff" class="staff-list">
+        <div class="media">
+          <div class="media-left media-middle">
+            <a href="#">
+              <img class="media-object vet-image" src="../assets/doctor-{{vet.shortName}}.jpg" alt="{{vet.name}}">
+            </a>
+          </div>
+          <div class="media-body">
+            <h3 class="media-heading stuff-name">{{ vet.name }}</h3>
+            {{ vet.bio }}
+          </div>
+        </div>
+      </div><!-- end col-md -->
+    </div><!-- end staff-list -->
+  </div><!-- end row -->
+</div><!-- end container main -->

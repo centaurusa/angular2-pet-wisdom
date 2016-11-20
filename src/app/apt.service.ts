@@ -20,8 +20,8 @@ export class AptService {
 
   getApts() {
     return this._http.get(this._url)
-      .map((response: Response) => response.json())
-      .catch(this._errorHandler);
+      .map((response: Response) => response.json());
+      // .catch(this._errorHandler);
   }
 
   removeApt() {
