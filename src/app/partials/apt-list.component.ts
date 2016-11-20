@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, trigger, state, style, transition, animate, keyframes } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { AptService } from '../apt.service';
 declare var firebase: any;
@@ -14,9 +14,12 @@ export class AptListComponent implements OnInit {
   currentTime = new Date().getTime();
   notification = false;
 
+  animateDelete() {
+    
+  }
+
   aptDelete(i) {
     console.log("deleting apt");
-    console.log(i);
     this.data.splice(i, 1);
   }
 
