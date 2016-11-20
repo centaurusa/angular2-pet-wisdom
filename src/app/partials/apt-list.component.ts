@@ -14,8 +14,10 @@ export class AptListComponent implements OnInit {
   currentTime = new Date().getTime();
   notification = false;
 
-  aptDelete() {
+  aptDelete(i) {
     console.log("deleting apt");
+    console.log(i);
+    this.data.splice(i, 1);
   }
 
  ifExpired(i) {
@@ -58,15 +60,4 @@ export class AptListComponent implements OnInit {
     })
   }
 
-  getIndex() {
-    for (let i=0;i<this.data.length;i++) {
-
-    }
-  }
-
-  deleteData() {
-    let index;
-    let ref = firebase.database().ref('/');
-
-  }
 }//end class
