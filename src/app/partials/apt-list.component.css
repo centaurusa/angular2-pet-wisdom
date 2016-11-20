@@ -31,3 +31,6 @@ li.media {
 .apt-notes {
   margin-left: 34px;
 }
+.expired {
+  color: red;
+}

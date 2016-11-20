@@ -1,12 +1,13 @@
 <li class="media" *ngFor="let i of data">
   <div class="media-left">
-    <button class="pet-delete btn btn-xs btn-danger" (click)="deleteData()">
+    <button class="pet-delete btn btn-xs btn-danger" (click)="isTimeOld()">
       <span class="glyphicon glyphicon-remove"></span>
     </button>
   </div>
   <div>
     <span class="pet-name">{{ i.petName}}</span>
-    <span class="apt-date pull-right">{{ i.aptDate + "  "+i.aptTime}}</span>
+    <span class="apt-date pull-right" [style.color]="ifExpired(i) ? '#d43f3a' : '' " [style.text-decoration]="ifExpired(i) ? 'line-through' : '' ">{{ i.aptDate + "  "+i.aptTime}}</span>
+    <!-- <span class="apt-date pull-right" *ngIf="ifExpired(i)">Expired</span> -->
   </div>
   <div class="ownerName"><span class="label-item">Owner: </span>
   {{ i.petOwner }}

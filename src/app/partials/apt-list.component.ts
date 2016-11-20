@@ -11,13 +11,29 @@ declare var firebase: any;
 })
 
 export class AptListComponent implements OnInit {
+  currentTime = new Date().getTime();
   notification = false;
+
   aptDelete() {
     console.log("deleting apt");
   }
 
+ ifExpired(i) {
+   let fullTime = i.aptDate+' '+i.aptTime;
+   let filteredFulltime = new Date(fullTime).getTime();
+   let isExpired = false;
+   if (filteredFulltime < this.currentTime) {
+        isExpired = true;
+   } else {
+        isExpired = false;
+   }
+   return isExpired;
+ }
+
   @Input()
    data = [];
+
+
 
   constructor(private _aptService: AptService) {
 
@@ -44,7 +60,7 @@ export class AptListComponent implements OnInit {
 
   getIndex() {
     for (let i=0;i<this.data.length;i++) {
-       
+
     }
   }
 

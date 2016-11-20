@@ -1,5 +1,6 @@
 .container.main {
     min-height: 660px;
+    padding: 40px 0px;
   }
 .container.main>h2{
   text-align: center;
