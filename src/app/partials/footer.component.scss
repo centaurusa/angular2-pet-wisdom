@@ -1,9 +1,11 @@
 @import 'colors.scss';
+@import 'mixins.scss';
 footer {
   margin-top: 40px;
   padding-top: 20px;
   height: 200px;
   background-color: $sky;
+  // @include panelGradient;
   h5 {
     margin: 0;
     color: white;

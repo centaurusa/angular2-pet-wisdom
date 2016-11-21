@@ -1,4 +1,5 @@
 @import 'colors.scss';
+@import 'mixins.scss';
 @keyframes showBody {
   from {
     opacity: 0;
@@ -13,13 +14,20 @@
 
 .panel-body {
   animation: showBody 1s ease both;
+
 }
 .panel.panel-primary {
-  border-color: $sky ;
+  border-color: $sky;
+  -webkit-box-shadow: 0px 6px 14px -2px rgba(0,0,0,0.52);
+  -moz-box-shadow: 0px 6px 14px -2px rgba(0,0,0,0.52);
+  box-shadow: 0px 6px 14px -2px rgba(0,0,0,0.52);
+
+
 }
 .panel-heading.apt-addheading {
-  background-color: $sky;
+  // background-color: $sky;
   border: none;
+  @include panelGradient;
 }
 .panel-heading.apt-addheading:hover {
   cursor: pointer;

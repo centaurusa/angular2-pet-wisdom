@@ -1,8 +1,12 @@
 @import 'colors.scss';
+@import 'mixins.scss';
 .navbar {
     border-radius: 0;
     padding: 10px 10px;
     margin-bottom: 40px;
+    -webkit-box-shadow: 0px 6px 14px -2px rgba(0,0,0,0.52);
+    -moz-box-shadow: 0px 6px 14px -2px rgba(0,0,0,0.52);
+    box-shadow: 0px 6px 14px -2px rgba(0,0,0,0.52);
 }
 
 a {
@@ -22,8 +26,9 @@ img#pet-icon {
 }
 
 nav.navbar.navbar-inverse {
-  background-color: $sky;
-  border: $sky;
+  // background-color: $sky;
+   border: $sky;
+    @include panelGradient;
 }
 ul li a {
   color: #fff;
