@@ -8,15 +8,9 @@ import { Component } from '@angular/core';
       <h2>Contact page</h2>
     </div>
   `,
-  styles: [
-    `
-      .container.main {
-        min-height: 660px;
-      }
-    `
-  ]
+  styleUrls: ['apt-contact.component.scss']
 })
 
 export class AptContactComponent {
-  
+
 }

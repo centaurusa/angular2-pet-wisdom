@@ -1,0 +1,42 @@
+@import 'colors.scss';
+@keyframes showBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.glyphicon.glyphicon-plus {
+}
+
+.panel-body {
+  animation: showBody 1s ease both;
+}
+.panel.panel-primary {
+  border-color: $sky ;
+}
+.panel-heading.apt-addheading {
+  background-color: $sky;
+  border: none;
+}
+.panel-heading.apt-addheading:hover {
+  cursor: pointer;
+}
+.btn.btn-primary.pull-right {
+  background-color: $sky;
+  border-color: $sky;
+  transition: $sky;
+}
+.btn.btn-primary.pull-right:hover {
+  background-color: $sky;
+  border-color: $sky;
+}
+.alert.alert-danger {
+  animation: showBody 1s ease both;
+  text-align: center;
+}
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
+  border-color: rgba(222,22,22,1);
+}

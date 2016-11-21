@@ -5,7 +5,7 @@ import { StaffService } from '../staff.service';
 @Component({
   selector: 'apt-about',
   templateUrl: './apt-staff.component.html',
-  styleUrls: ['./apt-staff.component.css']
+  styleUrls: ['./apt-staff.component.scss']
 })
 
 export class AptStaffComponent {

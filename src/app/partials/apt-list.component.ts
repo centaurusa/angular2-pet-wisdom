@@ -6,7 +6,7 @@ declare var firebase: any;
 @Component({
   selector: 'apt-list',
   templateUrl: 'apt-list.component.html',
-  styleUrls: ['apt-list.component.css'],
+  styleUrls: ['apt-list.component.scss'],
   inputs: ['apts']
 })
 
@@ -15,7 +15,7 @@ export class AptListComponent implements OnInit {
   notification = false;
 
   animateDelete() {
-    
+
   }
 
   aptDelete(i) {

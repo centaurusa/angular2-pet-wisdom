@@ -1,0 +1,37 @@
+@import 'colors.scss';
+li.media {
+  border-bottom: 1px solid $sky;
+  padding-bottom: 10px;
+  margin-bottom:  20px;
+}
+.media:last-child {
+  border: none;
+}
+.media-left {
+  margin-top: 4px;
+  float: left;
+}
+.pet-delete {
+  transition: background-color 0.3s;
+}
+.pet-delete:hover {
+}
+.pet-name {
+  font-size: 19px;
+  font-weight: 700;
+  color: $sky;
+}
+.apt-date {
+  font-style: italic;
+  margin-right: 4px;
+}
+.label-item {
+  color: $sky;
+  margin-left: 34px;
+}
+.apt-notes {
+  margin-left: 34px;
+}
+.expired {
+  color: $expired;
+}

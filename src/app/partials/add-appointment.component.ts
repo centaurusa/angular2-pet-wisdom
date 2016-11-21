@@ -7,7 +7,7 @@ declare var firebase: any;
 @Component({
   selector: 'add-apointment',
   templateUrl: 'add-apointment.component.html',
-  styleUrls: ['add-apointment.component.css']
+  styleUrls: ['add-apointment.component.scss']
 })
 
 export class AddApointmentComponent {

@@ -1,0 +1,57 @@
+@import 'colors.scss';
+.navbar {
+    border-radius: 0;
+    padding: 10px 10px;
+    margin-bottom: 40px;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'montserrat';
+}
+
+img#pet-icon {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.navbar .navbar-left {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+nav.navbar.navbar-inverse {
+  background-color: $sky;
+  border: $sky;
+}
+ul li a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: color 0.3s ease-in-out;
+  -webkit-ransition: color 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out;
+}
+ul.nav.navbar-nav.navbar-right li a:hover {
+  color: $persimon;
+}
+ul li a.active {
+  color: $persimon;
+  border-radius: 3px;
+}
+
+.navbar-inverse .navbar-toggle:focus,
+.navbar-inverse .navbar-toggle:hover {
+  background-color: $persimon;
+}
+.navbar-inverse .navbar-toggle {
+  border-color: #fff;
+}
+
+div.navbar-collapse.collapse.in,
+div.navbar-collapse.collapsing,
+div.navbar-header.col-md-offset-1 {
+  border-top: none;
+  outline: none;
+}
