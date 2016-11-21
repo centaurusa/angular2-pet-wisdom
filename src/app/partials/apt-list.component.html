@@ -1,6 +1,6 @@
-<li class="media" *ngFor="let i of data">
+<li class="media" *ngFor="let i of data" [@aptDelete]="i.state">
   <div class="media-left">
-    <button class="pet-delete btn btn-xs btn-danger" (click)="aptDelete(i)">
+    <button class="pet-delete btn btn-xs btn-danger"  (click)="aptDelete(i)">
       <span class="glyphicon glyphicon-remove"></span>
     </button>
   </div>

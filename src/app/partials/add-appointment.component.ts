@@ -29,9 +29,14 @@ declare var firebase: any;
 })
 
 export class AddApointmentComponent {
+    state: string = 'inactive';
     submitted = false;
     aptsNew = [];
     showForm: boolean;
+
+    toggleState() {
+      this.state = (this.state === 'inactive' ? 'active' : 'inactive');
+    }
 
     active = true;
 

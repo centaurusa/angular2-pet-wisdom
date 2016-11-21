@@ -1,7 +1,7 @@
 <div class="panel panel-primary">
-            <div class="panel-heading apt-addheading" (click)="toggleForm()">
+            <div class="panel-heading apt-addheading" (click)="toggleState()">
             <span class="glyphicon glyphicon-plus"></span> Add Appointment</div>
-            <div class="panel-body" *ngIf="showForm">
+            <div class="panel-body" [@formState]="state" >
               <form
                     #f="ngForm"
                     class="add-appointment form-horizontal"

@@ -7,20 +7,28 @@ declare var firebase: any;
   selector: 'apt-list',
   templateUrl: 'apt-list.component.html',
   styleUrls: ['apt-list.component.scss'],
-  inputs: ['apts']
+  inputs: ['apts'],
+  animations: [
+    trigger('aptDelete', [
+      state('void', style({transform: 'translateX(-100%)', opacity: 0})),
+      state('*', style({transform: 'translateX(0)', opacity: 1})),
+      transition('* => void', [
+        animate(400)
+      ])
+    ])
+  ]
 })
 
 export class AptListComponent implements OnInit {
+  state: string = '*';
   currentTime = new Date().getTime();
   notification = false;
 
-  animateDelete() {
-    
-  }
 
   aptDelete(i) {
     console.log("deleting apt");
     this.data.splice(i, 1);
+    this.state = (this.state === '*' ? 'void' : '*');
   }
 
  ifExpired(i) {
