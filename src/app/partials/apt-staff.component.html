@@ -4,7 +4,7 @@
 
     <div class="col-md-8 col-md-offset-2">
 
-      <div *ngFor="let vet of staff" class="staff-list">
+      <div *ngFor="let vet of staff" class="staff-list" [@showStaff]="state">
         <div class="media">
           <div class="media-left media-middle">
             <a href="#">

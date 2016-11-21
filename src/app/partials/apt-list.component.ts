@@ -16,7 +16,7 @@ declare var firebase: any;
         animate(400)
       ])
     ])
-  ]
+  ] // end animations
 })
 
 export class AptListComponent implements OnInit {
