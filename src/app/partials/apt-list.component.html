@@ -1,16 +1,16 @@
-<li class="media" *ngFor="let i of data" [@aptDelete]="i.state">
+<li class="media" *ngFor="let item of data; let i = index;" [@aptDelete]="item.state">
   <div class="media-left">
     <button class="pet-delete btn btn-xs btn-danger"  (click)="aptDelete(i)">
       <span class="glyphicon glyphicon-remove"></span>
     </button>
   </div>
   <div>
-    <span class="pet-name">{{ i.petName}}</span>
-    <span class="apt-date pull-right" [style.color]="ifExpired(i) ? '#d43f3a' : '' " [style.text-decoration]="ifExpired(i) ? 'line-through' : '' ">{{ i.aptDate + "  "+i.aptTime}}</span>
+    <span class="pet-name">{{ item.petName}}</span>
+    <span class="apt-date pull-right" [style.color]="ifExpired(item) ? '#d43f3a' : '' " [style.text-decoration]="ifExpired(item) ? 'line-through' : '' ">{{ item.aptDate + "  "+item.aptTime}}</span>
     <!-- <span class="apt-date pull-right" *ngIf="ifExpired(i)">Expired</span> -->
   </div>
   <div class="ownerName"><span class="label-item">Owner: </span>
-  {{ i.petOwner }}
+  {{ item.petOwner }}
   </div>
-  <div class="apt-notes">{{ i.aptNotes }}</div>
+  <div class="apt-notes">{{ item.aptNotes }}</div>
 </li>

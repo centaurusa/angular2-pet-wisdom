@@ -26,7 +26,7 @@ export class AptListComponent implements OnInit {
 
 
   aptDelete(i) {
-    console.log("deleting apt");
+    console.log(i);
     this.data.splice(i, 1);
     this.state = (this.state === '*' ? 'void' : '*');
   }

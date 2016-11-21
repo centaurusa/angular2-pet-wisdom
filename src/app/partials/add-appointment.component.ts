@@ -48,9 +48,9 @@ export class AddApointmentComponent {
 
     }
 
-    toggleForm() {
-      this.showForm = !this.showForm;
-    }
+    // toggleForm() {
+    //   this.showForm = !this.showForm;
+    // }
 
     onSubmit(value: any) {
         let apointment : Apointment = new Apointment();
