@@ -12,7 +12,7 @@ declare var firebase: any;
     trigger('aptDelete', [
       state('void', style({transform: 'translateX(-100%)', opacity: 0})),
       state('*', style({transform: 'translateX(0)', opacity: 1})),
-      transition('* => void', [
+      transition('* <=> void', [
         animate(400)
       ])
     ])
