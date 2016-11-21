@@ -1,14 +1,16 @@
+@import 'colors.scss';
 footer {
   margin-top: 40px;
   padding-top: 20px;
   height: 200px;
-  background-color: #089de3;
+  background-color: $sky;
+  h5 {
+    margin: 0;
+    color: white;
+    margin-bottom: 10px;
+  }
 }
-footer h5 {
-  margin: 0;
-  color: white;
-  margin-bottom: 10px;
-}
+
 footer .footer-links li {
   list-style: none;
   float: right;
@@ -19,7 +21,7 @@ footer .footer-links li a {
   transition: color 0.5s ease;
 }
 footer .footer-links li a:hover {
-  color: #FF634D;
+  color: $persimon;
 }
 footer .footer-links li a:first-child {
   margin-right: 10px;

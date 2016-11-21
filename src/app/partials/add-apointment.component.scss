@@ -27,11 +27,14 @@
 .btn.btn-primary.pull-right {
   background-color: $sky;
   border-color: $sky;
-  transition: $sky;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  &:hover {
+    background-color: darken($sky, 20%);
+    border-color: darken($sky, 20%);
+  }
 }
 .btn.btn-primary.pull-right:hover {
-  background-color: $sky;
-  border-color: $sky;
+
 }
 .alert.alert-danger {
   animation: showBody 1s ease both;

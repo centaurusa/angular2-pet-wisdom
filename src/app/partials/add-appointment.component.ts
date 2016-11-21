@@ -1,4 +1,10 @@
-import { Component } from '@angular/core';
+import { Component,
+         trigger,
+         state,
+         style,
+         transition,
+         animate
+ } from '@angular/core';
 import { Apointment } from '../apointment';
 import { AptService } from '../apt.service';
 
@@ -7,7 +13,19 @@ declare var firebase: any;
 @Component({
   selector: 'add-apointment',
   templateUrl: 'add-apointment.component.html',
-  styleUrls: ['add-apointment.component.scss']
+  styleUrls: ['add-apointment.component.scss'],
+  animations: [
+    trigger('formState', [
+      state('inactive', style({
+        display: 'none'
+      })),
+      state('active', style({
+        display: 'block'
+      })),
+      transition('inactive => active', animate('100ms ease-in')),
+      transition('active => inactive', animate('100ms ease-out'))
+    ])
+  ]
 })
 
 export class AddApointmentComponent {

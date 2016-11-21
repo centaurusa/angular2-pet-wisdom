@@ -15,7 +15,7 @@ export class AptListComponent implements OnInit {
   notification = false;
 
   animateDelete() {
-
+    
   }
 
   aptDelete(i) {
