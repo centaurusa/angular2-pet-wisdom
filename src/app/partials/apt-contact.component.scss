@@ -1,5 +1,21 @@
 @import 'colors.scss';
+@import 'mixins.scss';
 
 .container.main {
+  h2 {
+    text-align: center;
+  }
   min-height: 660px;
+  form {
+    margin-top: 40px;
+    input.ng-invalid.ng-touched {
+      border-color: $persimon;
+    }
+    input.ng-valid.ng-touched {
+      border-color: $sky;
+    }
+    button {
+      background-color: $sky;
+    }
+  }
 }
