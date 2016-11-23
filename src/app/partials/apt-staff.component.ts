@@ -1,5 +1,6 @@
 import { Component, OnInit, trigger, state, style, transition, animate } from '@angular/core';
 import { Http, Response } from '@angular/http';
+import { Router } from '@angular/router';
 import { StaffService } from '../staff.service';
 
 @Component({
@@ -20,9 +21,10 @@ import { StaffService } from '../staff.service';
 export class AptStaffComponent {
   state: string = '*';
   public staff;
-  constructor(private _staffService: StaffService ) {
+  constructor(private _staffService: StaffService, private router: Router ) {
 
   }
+
 
   ngOnInit() {
     this._staffService.getStaff()
@@ -34,5 +36,10 @@ export class AptStaffComponent {
         }
       );
   } //ngOnInit
+
+  onSelect(vet) {
+    this.router.navigate(['/staff', vet.id]);
+    console.log(vet.id);
+  }
 
 }

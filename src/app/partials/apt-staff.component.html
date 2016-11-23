@@ -7,8 +7,8 @@
       <div *ngFor="let vet of staff" class="staff-list" [@showStaff]="state">
         <div class="media">
           <div class="media-left media-middle">
-            <a href="#">
-              <img class="media-object vet-image" src="../assets/doctor-{{vet.shortName}}.jpg" alt="{{vet.name}}">
+            <a>
+              <img (click)="onSelect(vet)" class="media-object vet-image" src="../assets/doctor-{{vet.shortName}}.jpg" alt="{{vet.name}}">
             </a>
           </div>
           <div class="media-body">

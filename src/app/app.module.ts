@@ -8,6 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 //Components
 import { AddApointmentComponent } from './partials/add-appointment.component';
 import { AptStaffComponent } from './partials/apt-staff.component';
+import { AptStaffDetailComponent } from './partials/apt-staff-detail.component';
 import { AppComponent } from './app.component';
 import { AptListComponent  } from './partials/apt-list.component';
 import { AptFormComponent } from './partials/apt-form.component';
@@ -33,6 +34,7 @@ import { AppRoutingModule } from './app-routing.module';
     AptListComponent,
     AptFormComponent,
     AptStaffComponent,
+    AptStaffDetailComponent,
     AptContactComponent,
     PageNotFoundComponent
 
