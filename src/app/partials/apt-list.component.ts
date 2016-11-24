@@ -14,7 +14,7 @@ declare var firebase: any;
       state('void', style({ opacity: 0})),
       state('*', style({opacity: 1})),
       transition('* <=> void', [
-        animate(400)
+        animate(300)
       ])
     ])
   ] // end animations
@@ -31,6 +31,7 @@ export class AptListComponent implements OnInit {
     console.log(this);
     this.data.splice(i, 1);
     this.state = (this.state === '*' ? 'void' : '*');
+
   }
 
  ifExpired(i) {

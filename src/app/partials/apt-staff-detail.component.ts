@@ -7,9 +7,9 @@ import { ActivatedRoute, Router, Params } from '@angular/router';
       <div class="container main">
         <div>Detail Component of Id: {{ staffId }} </div>
         <hr />
-        <button (click)="onBackToStaff()">Back To Staff List</button>
-        <button (click)="onPrev()">Previous</button>
-        <button (click)="onNext()">Next</button>
+        <button (click)="onBackToStaff()" class="btn btn-primary">Back To Staff List</button>
+        <button (click)="onPrev()" class="btn btn-primary">Previous</button>
+        <button (click)="onNext()" class="btn btn-primary">Next</button>
       </div>
   `,
   styles: [
