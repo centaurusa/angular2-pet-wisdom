@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, trigger, state, style, transition, animate, keyframes } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { AptService } from '../apt.service';
+
 declare var firebase: any;
 
 @Component({
@@ -10,8 +11,8 @@ declare var firebase: any;
   inputs: ['apts'],
   animations: [
     trigger('aptDelete', [
-      state('void', style({transform: 'translateX(-100%)', opacity: 0})),
-      state('*', style({transform: 'translateX(0)', opacity: 1})),
+      state('void', style({ opacity: 0})),
+      state('*', style({opacity: 1})),
       transition('* <=> void', [
         animate(400)
       ])
@@ -27,6 +28,7 @@ export class AptListComponent implements OnInit {
 
   aptDelete(i) {
     console.log(i);
+    console.log(this);
     this.data.splice(i, 1);
     this.state = (this.state === '*' ? 'void' : '*');
   }

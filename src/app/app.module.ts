@@ -24,6 +24,8 @@ import { StaffService } from './staff.service';
 //Modules
 import { AppRoutingModule } from './app-routing.module';
 
+//pipes
+import { AptSearchPipe } from './apt-search.pipe';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { AppRoutingModule } from './app-routing.module';
     AptStaffComponent,
     AptStaffDetailComponent,
     AptContactComponent,
+    AptSearchPipe,
     PageNotFoundComponent
 
   ],

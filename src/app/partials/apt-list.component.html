@@ -1,4 +1,5 @@
-<li class="media" *ngFor="let item of data; let i = index;" [@aptDelete]="item.state">
+<input class="form-control" type="text" id="search" placeholder="search" [(ngModel)]="search" />
+<li class="media" *ngFor="let item of data | filter:search; let i = index;" [@aptDelete]="item.state">
   <div class="media-left">
     <button class="pet-delete btn btn-xs btn-danger"  (click)="aptDelete(i)">
       <span class="glyphicon glyphicon-remove"></span>
